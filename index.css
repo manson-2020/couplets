@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+body, header, div, main, ul, li {
+    display: flex;
+    flex-direction: column;
+}
+
+:root {
+    color: #fff;
+    font-size: 15px;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-sa {
+    justify-content: space-around;
+}
+
+.jc-sb {
+    justify-content: space-between;
+}
+
+.f1 {
+    flex: 1;
+}
+
+.f2 {
+    flex: 2;
+}
+
+.f3 {
+    flex: 3;
+}
+
+.f4 {
+    flex: 4;
+}
+
+.f5 {
+    flex: 5;
+}
+
+.f6 {
+    flex: 6;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.fs-12 {
+    font-size: 12px;
+}
+
+.fs-9 {
+    font-size: 9px;
+}
+
+@media screen and (max-width: 750px) {
+    body {
+        background-image: url(images/background-Phone.png);
+        min-height: 667px;
+    }
+    .pc-container {
+        display: none;
+    }
+    .mobile-container {
+        width: 100%;
+        height: 100vh;
+        position: relative;
+    }
+    .mobil-picture-main {
+        margin: 93px 0 0 18px;
+        height: 0;
+    }
+    .progress {
+        margin: 30px 70px;
+        align-items: center;
+        justify-content: center
+    }
+    .progress::after {
+        content: attr(data-percent);
+    }
+    .progress-bar {
+        height: 22px;
+        width: 100%;
+        padding: 7px 5.2% 5px 5.7%;
+        background-image: url(images/progress.png);
+    }
+    .proportion {
+        content: "";
+        height: 100%;
+        width: 0;
+        border-radius: 10px;
+        background: linear-gradient(0deg, #91F13F 0%, #6BC717 42%, #66BD17 73%, #ACE26D 100%);
+        transition: 0.1s width;
+    }
+    .footer {
+        width: 100vw;
+        margin-bottom: 6px;
+        margin-top: 18px;
+    }
+    .picture-cctv {
+        width: 70px;
+        height: 20px;
+        margin: 0 auto 6px;
+    }
+    .describe {
+        font-size: 9px;
+        text-align: center;
+    }
+    .logo-2020 {
+        position: relative;
+        background-image: url(images/2020.png);
+        margin: 0 75px;
+        height: 110px;
+        width: 66%;
+    }
+    .logo-2020 input {
+        position: absolute;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        color: #fff;
+        bottom: 27px;
+        font-size: 15px;
+        height: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .logo-2020 input::placeholder {
+        font-size: 12px;
+        color: #eee;
+    }
+    .submit {
+        margin-top: -12px;
+        cursor: pointer;
+        width: 50px;
+        height: 50px;
+    }
+    .icon-mobile, .icon-back {
+        pointer-events: none;
+    }
+    .icon-mobile {
+        width: 100%;
+        height: 100%;
+    }
+    .result-img {
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+    }
+    .back-btn, .play-btn {
+        position: absolute;
+        color: #fff;
+        background-color: transparent;
+        border: none;
+        overflow: hidden;
+        border-radius: 50%;
+    }
+    .play-btn {
+        right: 0;
+        padding: 10px;
+    }
+    .icon-back {
+        width: 60px;
+        height: 60px;
+    }
+    .icon-music {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media screen and (min-width: 750px) {
+    body {
+        background-image: url(images/background-PC.png);
+        min-height: 800px;
+        height: 100vh;
+        position: relative;
+    }
+    .mobile-container {
+        display: none;
+    }
+    .pc-container {
+        position: absolute;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.2rem;
+        bottom: 9rem;
+        right: 36rem;
+    }
+    .icon {
+        width: 15rem;
+        height: 15rem;
+    }
+}
